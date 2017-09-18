@@ -1,33 +1,47 @@
 <!DOCTYPE HTML>
-
+<!--
+	Introspect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
 <html>
 	<head>
-		<title>C2D GLOBAL</title>
+		<title>Introspect by TEMPLATED</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+		inner
+		{background-image: url("D:\file mer\c2d\templated-introspect\images\banner.jpg");}
+		</style>
+		
 	</head>
 	<body>
+					
+
 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">C2D</a>
+					<a href="index.html" class="logo">introspect</a>
 					<nav id="nav">
 						<a href="index.html">Home</a>
-						<a href="generic.html">Blog</a>
-						<a href="elements.html">Social</a>
+						<a href="generic.html">Generic</a>
+						<a href="elements.html">Elements</a>
 					</nav>
 				</div>
 			</header>
 			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
 		<!-- Banner -->
-			<section id="banner">
+			<section id="banner" >
 				<div class="inner">
-					<h1>C2D : <span>UNITED FOR A VISION IN MIND</span></h1>
+				
+					<h1>Introspect: <span>A free + fully responsive<br />
+					site template by TEMPLATED</span></h1>
+					
 					<ul class="actions">
-						<li><a href="#" class="button alt">EXPLORE US !</a></li>
+						<li><a id="changebtn" href="#" onclick="change();" class="button alt">Get Started</a></li>
 					</ul>
 				</div>
 			</section>
@@ -36,7 +50,7 @@
 			<section id="one">
 				<div class="inner">
 					<header>
-						<h2>BLOG</h2>
+						<h2>Magna Etiam Lorem</h2>
 					</header>
 					<p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu, erisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante.</p>
 					<ul class="actions">
@@ -51,10 +65,10 @@
 					<article>
 						<div class="content">
 							<header>
-								<h3>The Complete Actor</h3>
+								<h3>Pellentesque adipis</h3>
 							</header>
 							<div class="image fit">
-								<img src="images/s1.jpg" alt="" />
+								<img src="images/pic01.jpg" alt="" />
 							</div>
 							<p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
 						</div>
@@ -62,10 +76,10 @@
 					<article class="alt">
 						<div class="content">
 							<header>
-								<h3>C2D Onam @ RIT</h3>
+								<h3>Morbi interdum mol</h3>
 							</header>
 							<div class="image fit">
-								<img src="images/s2.jpg" alt="" />
+								<img src="images/pic02.jpg" alt="" />
 							</div>
 							<p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
 						</div>
@@ -145,6 +159,28 @@
 			</section>
 
 		<!-- Scripts -->
+		<script>
+		i=0;
+		function myTimer() {
+        
+		if(i==0)
+		{
+		
+		document.getElementById('banner').style.backgroundImage='url(file:///D:/file%20mer/c2d/templated-introspect/images/s2.jpg)';
+        i=1;		
+		
+		}
+        else
+		{
+		document.getElementById('banner').style.backgroundImage='url(file:///D:/file%20mer/c2d/templated-introspect/images/s1.jpg)';
+         i=0;	
+         		 
+		}
+
+		}
+
+setInterval(myTimer,5000);
+		</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
