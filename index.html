@@ -164,20 +164,29 @@
         
 		if(i==0)
 		{
-		
 		document.getElementById('banner').style.backgroundImage='url(https://ronygigi.github.io/c2d/images/s2.jpg)';
-        i=1;		
-		
+                i=1;		
 		}
-        else
+                else if(i==1)
 		{
 		document.getElementById('banner').style.backgroundImage='url(https://ronygigi.github.io/c2d/images/s1.jpg)';
-         i=0;	
-         		 
+                i=2;	 
 		}
-
+	        else if(i==2)
+		{
+		document.getElementById('banner').style.backgroundImage='url(https://asg89.github.io/c2d/images/banner1.jpg)';
+                i=3;	 
 		}
-
+	        else if(i==3)
+		{
+		document.getElementById('banner').style.backgroundImage='url(https://asg89.github.io/c2d/images/banner2.jpg)';
+                i=4;	 
+		}else if(i==4)
+		{
+		document.getElementById('banner').style.backgroundImage='url(https://asg89.github.io/c2d/images/pic02.jpg)';
+                i=0;	 
+		}
+		}
 setInterval(myTimer,5000);
 		</script>
 			<script src="assets/js/jquery.min.js"></script>
