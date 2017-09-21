@@ -128,9 +128,9 @@
 					</article>
 				</div>
 			</section>
-		<iframe width="0" height="0" src="https://www.youtube.com/embed/hVl1pbsLBVc?autoplay=1" frameborder="0" allowfullscreen></iframe>
+	<!--	<iframe width="0" height="0" src="https://www.youtube.com/embed/hVl1pbsLBVc?autoplay=1" frameborder="0" allowfullscreen></iframe>-->
 <!--vdo-->
-		<!-- Footer -->
+	<!-- Footer -->
 			<section id="footer">
 				<div class="inner">
 					<header>
@@ -160,6 +160,7 @@
 			</section>
 
 		<!-- Scripts -->
+		
 		<script>
 		i=0;
 		function myTimer() {
@@ -215,7 +216,51 @@
 		}
 		}
 setInterval(myTimer,5000);
-		</script>
+</script>
+<script type="text/javascript">
+function flashBody(elem,time){
+    $(elem).css('position','fixed');
+    $(elem).css('top',Math.round(20+Math.random()*60)+'%')
+    $(elem).css('left',Math.round(20+Math.random()*60)+'%')
+    $(elem).show();
+    setTimeout(
+        function(){
+            $(elem).hide();
+            
+        },time);
+
+}
+
+function loadSound (src) { 
+    var sound = document.createElement("audio"); 
+    if ("src" in sound) { 
+        sound.autoPlay = false; 
+    } 
+    else { 
+        sound = document.createElement("bgsound"); 
+        sound.volume = -10000; 
+        sound.play = function () { 
+            this.src = src; 
+            this.volume = 0; 
+        } 
+    } 
+    sound.src = src; 
+    document.body.appendChild(sound); 
+    return sound; 
+ } 
+
+$(function () {
+    var sound = loadSound("http://labyrinth.dyuthi.in/static/audio/labyrinth_theme.mp3");  //  preload
+    sound.loop = true;
+    sound.play();
+    // setInterval(function(){
+    //     if(Math.random()>=0.6){
+    //         flashBody("#flash_1");
+    //     }
+    // },3000);
+});
+</script>
+	
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
