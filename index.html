@@ -19,6 +19,8 @@
 		
 	</head>
 	<body>
+		<div id="loading"></div>
+		
 <script>
 		i=0;
 		function myTimer() {
@@ -232,7 +234,9 @@ function flashBody(elem,time){
         },time);
 
 }
-
+$(window).ready(function() {
+    $('#loading').hide();
+});
 function loadSound (src) { 
     var sound = document.createElement("audio"); 
     if ("src" in sound) { 
