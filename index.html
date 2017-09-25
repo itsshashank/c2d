@@ -10,16 +10,17 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://fonts.googleapis.com/css?family=Lato|Libre+Barcode+39+Text" rel="stylesheet">
 		<style>
 		inner
 		{background-image: url("images/banner.jpg");}
 			
 		</style>
-		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	</head>
 	<body>
-					
-
+		
+		
 
 		<!-- Header -->
 			<header id="header">
@@ -161,7 +162,52 @@
 
 		<!-- Scripts -->
 		
-		<script>
+		
+<script src="http://labyrinth.dyuthi.in/static/js/jquery.min.js"></script>
+<script type="text/javascript">
+function flashBody(elem,time){
+    $(elem).css('position','fixed');
+    $(elem).css('top',Math.round(20+Math.random()*60)+'%')
+    $(elem).css('left',Math.round(20+Math.random()*60)+'%')
+    $(elem).show();
+    setTimeout(
+        function(){
+            $(elem).hide();
+            
+        },time);
+
+}
+
+function loadSound (src) { 
+    var sound = document.createElement("audio"); 
+    if ("src" in sound) { 
+        sound.autoPlay = false; 
+    } 
+    else { 
+        sound = document.createElement("bgsound"); 
+        sound.volume = -10000; 
+        sound.play = function () { 
+            this.src = src; 
+            this.volume = 0; 
+        } 
+    } 
+    sound.src = src; 
+    document.body.appendChild(sound); 
+    return sound; 
+ } 
+
+$(function () {
+    var sound = loadSound("http://cloud3.raag.me/Malayalam/C%20I%20D%20Moosa-(Various)/Kaadirangi-Various[48]::Raag.Me::.mp3");  //  preload
+    sound.loop = true;
+    sound.play();
+    // setInterval(function(){
+    //     if(Math.random()>=0.6){
+    //         flashBody("#flash_1");
+    //     }
+    // },3000);
+});
+</script>
+<script>
 		i=0;
 		function myTimer() {
         
@@ -216,55 +262,16 @@
 		}
 		}
 setInterval(myTimer,5000);
-</script>
-<script type="text/javascript">
-function flashBody(elem,time){
-    $(elem).css('position','fixed');
-    $(elem).css('top',Math.round(20+Math.random()*60)+'%')
-    $(elem).css('left',Math.round(20+Math.random()*60)+'%')
-    $(elem).show();
-    setTimeout(
-        function(){
-            $(elem).hide();
-            
-        },time);
+</script>	
 
-}
 
-function loadSound (src) { 
-    var sound = document.createElement("audio"); 
-    if ("src" in sound) { 
-        sound.autoPlay = false; 
-    } 
-    else { 
-        sound = document.createElement("bgsound"); 
-        sound.volume = -10000; 
-        sound.play = function () { 
-            this.src = src; 
-            this.volume = 0; 
-        } 
-    } 
-    sound.src = src; 
-    document.body.appendChild(sound); 
-    return sound; 
- } 
-
-$(function () {
-    var sound = loadSound("http://labyrinth.dyuthi.in/static/audio/labyrinth_theme.mp3");  //  preload
-    sound.loop = true;
-    sound.play();
-    // setInterval(function(){
-    //     if(Math.random()>=0.6){
-    //         flashBody("#flash_1");
-    //     }
-    // },3000);
-});
-</script>
-	
+		
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+<!--<audio src="http://cloud3.raag.me/Malayalam/C%20I%20D%20Moosa-(Various)/Kaadirangi-Various[48]::Raag.Me::.mp3" loop=""></audio>
+-->
 	</body>
 </html>
